@@ -6,7 +6,7 @@
 /*   By: mel-badd <mel-badd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 10:47:27 by mel-badd          #+#    #+#             */
-/*   Updated: 2025/12/06 16:56:08 by mel-badd         ###   ########.fr       */
+/*   Updated: 2025/12/06 17:59:18 by mel-badd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,6 +202,7 @@ size_t	ft_strlen(char *s);
 char    *ft_substr(char *s, unsigned int start, size_t len);
 char    *ft_strdup(char *s1);
 char    *ft_strjoin(char *s1, char *s2);
+int	ft_atoi(const char *str);
 int     ft_strcmp(char *s1, char *s2);
 size_t  ft_strlen(char *s);
 char    **ft_split(char *s, char c);
@@ -210,18 +211,40 @@ char    **ft_split(char *s, char c);
 void    init_cub(t_cub *cub);
 void	pad_map(char **map);
 int     pars_av(int ac, char **av);
+void init_cub(t_cub *cub);
 void    init_texture(char *path, t_cub *cub);
 int     check_path(char *path);
 int     is_path(char **split, t_cub *cub, char *line);
+int is_empty_line(char *line);
 void    join(t_cub *cub, char **path);
 int     read_map(char *av, t_cub *cub);
+int handle_colors_str(char *color);
+int number_of_char(t_cub *cub);
+int pars_av(int ac, char **av);
+void init_texture(char *path, t_cub *cub);
 int     handle_colors_F(t_cub *cub);
+int handle_colors_str(char *color);
 int     handle_colors_C(t_cub *cub);
+int ft_split_len(char **split);
+int read_map(char *av, t_cub *cub);
+void join(t_cub *cub, char **path);
+int pars_map(t_cub *cub);
+int	handle_empty_line(t_cub *cub, char *line);
 int check_maps(char **map);
 int     number_of_char(t_cub *cub);
+int check_maps(char **map);
+void ft_free_split(char **split);
+void find_p(t_cub *cub);
+void change_space(t_cub *cub);
+void clean_newline(char *str);
+int	is_path(char **split, t_cub *cub, char *line);
 int     pars_map(t_cub *cub);
+int	handle_colors2(char **split, t_cub *cub);
 void    change_space(t_cub *cub);
 int     handle_map(t_cub *cub);
+int	can_start_map(t_cub *cub);
+int	handle_textures2(char **split, t_cub *cub);
+int check_path(char *path);
 void    find_p(t_cub *game);
 
 /* MLX functions */

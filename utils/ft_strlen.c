@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   failed_msg.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: omaezzem <omaezzem@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mel-badd <mel-badd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/13 14:26:21 by omaezzem          #+#    #+#             */
-/*   Updated: 2025/09/13 14:28:16 by omaezzem         ###   ########.fr       */
+/*   Created: 2025/12/06 17:20:19 by mel-badd          #+#    #+#             */
+/*   Updated: 2025/12/06 17:20:24 by mel-badd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub.h"
 
-void	failed_w()
+size_t ft_strlen(char *str)
 {
-	ft_putstr_fd("Error\n🛑 Failed to create window\n", 2);
-	exit(1);
+	int i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return i;
 }
