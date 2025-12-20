@@ -6,7 +6,7 @@
 /*   By: mel-badd <mel-badd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 17:23:46 by mel-badd          #+#    #+#             */
-/*   Updated: 2025/12/06 17:48:25 by mel-badd         ###   ########.fr       */
+/*   Updated: 2025/12/20 15:49:57 by mel-badd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	handle_empty_line(t_cub *cub, char *line)
 	{
 		if (cub->map == NULL)
 			return (1);
-		ft_putstr_fd("Error: empty line inside map\n", 2);
-		return (0);
+		// ft_putstr_fd("Error: empty line inside map\n", 2);
+		// return (0);
 	}
 	return (2);
 }

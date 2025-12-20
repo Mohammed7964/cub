@@ -6,7 +6,7 @@
 /*   By: mel-badd <mel-badd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 17:21:14 by mel-badd          #+#    #+#             */
-/*   Updated: 2025/12/06 17:44:06 by mel-badd         ###   ########.fr       */
+/*   Updated: 2025/12/20 15:48:03 by mel-badd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,8 +99,11 @@ int	is_empty_line(char *line)
 	{
 		if (line[i] != ' ' && line[i] != '\t'
 			&& line[i] != '\n' && line[i] != '\r')
-			return (0);
+			{
+				return (0);
+			}
 		i++;
 	}
+				printf("line[%d] = '%c'\n", i, line[i]);
 	return (1);
 }

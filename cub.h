@@ -6,7 +6,7 @@
 /*   By: mel-badd <mel-badd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/03 10:47:27 by mel-badd          #+#    #+#             */
-/*   Updated: 2025/12/06 17:59:18 by mel-badd         ###   ########.fr       */
+/*   Updated: 2025/12/20 15:23:35 by mel-badd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,6 +153,8 @@ typedef struct s_cub
 
     /* Map related */
     char        *map;
+    int map_started;
+    int map_ended;
     char        **map_lines;
 
     /* Texture paths (strings) */

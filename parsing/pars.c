@@ -6,7 +6,7 @@
 /*   By: mel-badd <mel-badd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 09:36:42 by omaezzem          #+#    #+#             */
-/*   Updated: 2025/12/06 18:17:49 by mel-badd         ###   ########.fr       */
+/*   Updated: 2025/12/20 14:59:22 by mel-badd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ void	pad_map(char **map_lines)
 	while (map_lines[i])
 	{
 		padded = pad_line(map_lines[i], max_len);
+		// printf("padded line: '%s'\n", padded);
 		free(map_lines[i]);
 		map_lines[i] = padded;
 		i++;
