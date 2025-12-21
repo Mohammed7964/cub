@@ -19,7 +19,7 @@
 # include <fcntl.h>
 # include <string.h>
 # include <math.h>
-# include <mlx.h>
+// # include <mlx.h>
 # include <stdbool.h>
 # include "get_next_line/get_next_line.h"
 

@@ -54,18 +54,31 @@ static int	check_ziro(t_cub *cub)
 }
 int new_lines_map(t_cub *cub)
 {
-	int i = 0;
-	while (cub->map[i])
+	int i;
+	int end;
+
+	i = 0;
+	/* skip leading newlines */
+	while (cub->map[i] && cub->map[i] == '\n')
+		i++;
+
+	end = ft_strlen(cub->map) - 1;
+	/* skip trailing newlines */
+	while (end > i && cub->map[end] == '\n')
+		end--;
+
+	while (i < end)
 	{
-		if (cub->map[i] == '\n')
+		if (cub->map[i] == '\n' && cub->map[i + 1] == '\n')
 		{
-			fprintf(stderr, "Error: Consecutive new lines in map\n");
+			fprintf(stderr, "Error: New line inside map\n");
 			return (0);
 		}
 		i++;
 	}
 	return (1);
 }
+
 static int	init_map(t_cub *cub, char *file)
 {
 	if (!read_map(file, cub))
@@ -139,10 +152,10 @@ int	main(int ac, char **av)
 		return (fprintf(stderr, "Error: Failed to init map\n"), EXIT_FAILURE);
 	}
 	build_map_string(&cub);
-	cub.floor_color = 0x573D32;
-	cub.ceiling_color = 0x87CEEB;
-	init_player_raycasting(&cub);
-	mlx_initcub(&cub);
+	// cub.floor_color = 0x573D32;
+	// cub.ceiling_color = 0x87CEEB;
+	// init_player_raycasting(&cub);
+	// mlx_initcub(&cub);
 	cleanup(&cub);
 	return (0);
 }

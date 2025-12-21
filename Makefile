@@ -14,12 +14,12 @@ NAME  	= cub3D
 
 NAME_BONUS =
 
-CC 		= gcc
+CC 		= cc
 
-CFLAGS 	= -Wall -Wextra -Werror
+CFLAGS 	= #-Wall -Wextra -Werror
 
-SRCS 	= cub.c  init_mlx.c utils/ft_split.c utils/ft_strjoin.c utils/utils.c parsing/pars.c get_next_line/get_next_line_utils.c get_next_line/get_next_line.c\
-				errors/failed_msg.c ray_casting/ray.c utils/ft_strcmp.c utils/ft_strlen.c parsing/parc2.c parsing/parc3.c parsing/parc4.c parsing/parc5.c parsing/parc6.c\
+SRCS 	= cub.c  utils/ft_split.c utils/ft_strjoin.c utils/utils.c parsing/pars.c get_next_line/get_next_line_utils.c get_next_line/get_next_line.c\
+				errors/failed_msg.c utils/ft_strcmp.c utils/ft_strlen.c parsing/parc2.c parsing/parc3.c parsing/parc4.c parsing/parc5.c parsing/parc6.c\
 				parsing/parc7.c parsing/parc8.c utils/ft_atoi.c
 all: $(NAME)
 
@@ -27,7 +27,7 @@ OBJS	= $(SRCS:.c=.o)
 BOBJS   = $(BSRC:.c=.o)
 
 $(NAME) : $(OBJS)
-	@$(CC) -lmlx -framework OpenGL -framework AppKit  $^ -o $@
+	@$(CC)   $^ -o $@
 
 %.o: %.c get_next_line/get_next_line.h cub.h
 	$(CC) $(CFLAGS) -c $< -o $@
